@@ -1,0 +1,29 @@
+.main{
+    border: 1px solid black;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
+    width: 400px;
+    padding: 5px 5px 10px 5px;
+}
+.btn{
+    border-radius: 10px;
+    width: 150px;
+    height: 20px;
+    background-color: #fff;
+    color: black;
+    cursor: pointer;
+    padding-top: 20px;
+    font-size: large;
+    font-weight: 300;
+    text-align: center;
+    padding-bottom: 40px;
+    background-color: rgb(233, 151, 44);
+}
+
+.field{
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
