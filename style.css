@@ -27,3 +27,32 @@
     text-align: center;
     border-radius: 10px;
 }
+
+.btnUpdate{
+    border-radius: 10px;
+    width: 150px;
+    height: 20px;
+    color:#fff;
+    cursor: pointer;
+    padding-top: 20px;
+    font-size: large;
+    font-weight: 300;
+    text-align: center;
+    padding-bottom: 40px;
+    background-color: rgb(34, 126, 87);
+    text-transform: uppercase;
+}
+.btnCancel{
+    border-radius: 10px;
+    width: 150px;
+    height: 20px;
+    color: #fff;
+    cursor: pointer;
+    padding-top: 20px;
+    font-size: large;
+    font-weight: 300;
+    text-align: center;
+    padding-bottom: 40px;
+    background-color: rgb(136, 38, 38);
+    text-transform: uppercase;
+}
