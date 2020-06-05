@@ -54,22 +54,39 @@
                   class="field"></p>
         <input type="submit" name="btnsave" value="Save" class="btn">
     </form>
-    
+    <br>
+    <table id="producttable">
+        <thead>
+            <th>ID |</th>
+            <th>Product Name |</th>
+            <th>Product Price |</th>
+            <th>Edit |</th>
+            <th>Delete</th>
+        </thead>
+        <tbody>
+        <?php
+
+            $select = $pdo->prepare("select * from tbl_product");
+
+            $select->execute();
+            //get all the records from the db
+            while ($row = $select->fetch(PDO::FETCH_OBJ)) {
+              echo'
+               
+                <tr>
+                   <td>'.$row->prodId.'</td>
+                   <td>'.$row->productname.'</td>
+                   <td>'.$row->productprice.'</td>
+                   <td><button type="submit" value="'.$row->prodId.'">EDIT</button></td>
+                   <td><button type="submit" value="'.$row->prodId.'">DELETE</button></td>                   
+                </tr>   
+              
+              ';  
+            }
+
+            ?>
+        </tbody>       
+    </table>
 </body>
 </html>
 <hr>
-<?php
-
-    $select = $pdo->prepare("select * from tbl_product");
-
-    $select->execute();
-    echo "<pre>";
-
-    while ($row = $select->fetch()) {
-        print_r($row);
-    }
-
-    
-    
-
-?>
