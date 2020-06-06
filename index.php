@@ -60,10 +60,26 @@
         } else {
             # code...
             echo 'Please give me valid values!';
-        }
-        
+        }      
 
     } 
+    //Delete data from the db
+    if (isset($_POST['btnDelete'])) {
+        # code...
+        $delete = $pdo -> prepare("delete from tbl_product where prodId=".$_POST['btnDelete']);
+
+        $delete -> execute();
+
+        if ($delete ->  rowCount()) {
+
+            echo 'Delete Successfully!';
+
+        } else {
+            # code...
+            echo 'Delete Failed!';
+        }
+
+    }
 
 ?>
 
